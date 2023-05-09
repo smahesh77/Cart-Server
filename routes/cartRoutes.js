@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const cartController = require('../controller/cartController')
 
-router.post('/api/add', cartController.add)//dedicated controllers
+//dedicated controllers
+router.post('/api/add', cartController.add)
 router.get('/api/get', cartController.get)
+router.put('/api/put/:id', cartController.put)
 
 module.exports = router
