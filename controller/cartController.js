@@ -46,3 +46,18 @@ exports.put = async (req, res) => {
         "new": ProductData[index]
     })
 }
+
+exports.del = async (req, res) => {
+    let id = req.params.id *1
+    let proToUpdate = ProductData.find(p=>p.id === id)//will go throught each product and assign the product with the id in params
+    let index = ProductData.indexOf(proToUpdate)
+
+    ProductData.sl
+
+    console.log("deleted")
+    res.status(204).json({
+        "status": "success",
+        "message": "product deleted"
+    })
+
+}
